@@ -14,7 +14,7 @@ app.use(express.json());
 
 // Allow specific origin(s)
 app.use(cors({
-  origin: 'https://restaurant-finder-frontend-tan.vercel.app/'
+  origin: 'https://restaurant-finder-frontend-oa70dftxd-patrick-alvarezs-projects.vercel.app'
 }));
 
 // ROUTING
