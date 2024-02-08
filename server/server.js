@@ -4,6 +4,10 @@ const app = express();
 const cors = require('cors')
 const morgan = require("morgan");
 
+
+
+
+
 const port = process.env.PORT || 3006;
 const db = require('./db/index');
 
@@ -11,6 +15,11 @@ const db = require('./db/index');
 app.use(cors());
 app.use(morgan("dev"));
 app.use(express.json());
+
+// Allow specific origin(s)
+app.use(cors({
+  origin: 'https://restaurant-finder-frontend-tan.vercel.app/'
+}));
 
 // ROUTING
 app.get('/api/v1/restaurants', async (req, res) => {
