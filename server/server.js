@@ -4,7 +4,7 @@ const app = express();
 const cors = require('cors')
 const morgan = require("morgan");
 
-const port = process.env.PORT || 3006;
+const port = process.env.PORT;
 const db = require('./db/index');
 
 // MIDDLEWARE
@@ -102,3 +102,5 @@ app.post('/api/v1/restaurants/:restaurantId/addReview', async (req, res) => {
 app.listen(port, () => {
   console.log(`server is up and listening on port ${port}`);
 });
+
+module.exports = app;
