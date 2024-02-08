@@ -19,6 +19,8 @@ app.use(cors({
 
 // ROUTING
 app.get('/api/v1/restaurants', async (req, res) => {
+  res.set('Access-Control-Allow-Origin', '*');
+
   try {
     const results = await db.query('SELECT * FROM restaurants');
 
