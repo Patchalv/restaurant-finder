@@ -12,10 +12,6 @@ app.use(cors());
 app.use(morgan("dev"));
 app.use(express.json());
 
-// Allow specific origin(s)
-app.use(cors({
-  origin: 'https://restaurant-finder-frontend-oa70dftxd-patrick-alvarezs-projects.vercel.app'
-}));
 
 // ROUTING
 app.get('/api/v1/restaurants', async (req, res) => {
