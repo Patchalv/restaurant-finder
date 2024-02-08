@@ -4,10 +4,6 @@ const app = express();
 const cors = require('cors')
 const morgan = require("morgan");
 
-
-
-
-
 const port = process.env.PORT || 3006;
 const db = require('./db/index');
 
